@@ -59,17 +59,6 @@ int main() {
         return 1;
     }
 
-    
-    /*std::cout << "ループの長さ:" << loop_length << '\n';
-    std::cout << "ループ開始点: ";
-
-    for (size_t i = 0; i < loop_begins.size(); ++i) {
-        std::cout << loop_begins[i];
-            
-        if (i != loop_begins.size() - 1) {
-            std::cout << ", ";
-        }
-    }*/
 
     while (true) {
         int goal_time = 1;    //全体として何分まで拡張したいか．
