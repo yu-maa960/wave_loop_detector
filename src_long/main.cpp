@@ -59,17 +59,7 @@ int main() {
         return 1;
     }
 
-    
-    /*std::cout << "ループの長さ:" << loop_length << '\n';
-    std::cout << "ループ開始点: ";
 
-    for (size_t i = 0; i < loop_begins.size(); ++i) {
-        std::cout << loop_begins[i];
-            
-        if (i != loop_begins.size() - 1) {
-            std::cout << ", ";
-        }
-    }*/
 
     while (true) {
         int goal_time = 1;    //全体として何分まで拡張したいか．
@@ -103,7 +93,6 @@ int main() {
             std::cout << "抽出したい素材の番号を選択してください\n";
             std::cout << " 1 : イントロ部分のみ抽出\n";
             std::cout << " 2 : ループ部分(無限ループ用)のみ抽出\n";
-            std::cout << " 3 : アウトロ部分のみ抽出\n";
             std::cout << " 9 : 前のメニューに戻る\n";
             std::cout << std::endl;
 
@@ -115,8 +104,6 @@ int main() {
                     goal_time = 0;
                 } else if (option == 2) {
                     goal_time = 8888;
-                } else if (option == 3) {
-                    goal_time = 9999;
                 } else if (option == 9) {
                     goal_time = -9;
                 } else {
@@ -142,10 +129,6 @@ int main() {
             }
             case 8888: {
                 out_path = exe_dir / "music_output" / (base_name + "_loop.wav");
-                break;
-            }
-            case 9999: {
-                out_path = exe_dir / "music_output" / (base_name + "_outro.wav");
                 break;
             }
             default: {

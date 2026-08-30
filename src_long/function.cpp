@@ -250,8 +250,8 @@ int function::find_loop_length(const std::vector<double>& wave, uint32_t sample_
             }
         }
 
-        std::cout << "Test Point (" << tp * 100 << "%): Peak 1 = " << peak1 
-                    << ", Peak 2 = " << peak2 << ", Score = " << current_max_score << std::endl;
+        /*std::cout << "Test Point (" << tp * 100 << "%): Peak 1 = " << peak1 
+                    << ", Peak 2 = " << peak2 << ", Score = " << current_max_score << std::endl;*/
 
         if (current_max_score > absolute_max_score) {
             absolute_max_score = current_max_score;
@@ -367,14 +367,14 @@ std::vector<double> function::create_extended_bgm(const std::vector<double>& wav
         return new_wave;
     }
 
-    if (goal_time == 9999) {
+    /*if (goal_time == 9999) {
         if (outro_length > 0) {
             new_wave.insert(new_wave.end(), wave.begin() + outro_start, wave.end());
         } else {
             std::cout << "このデータからアウトロが検出されませんでした．ファイルは出力されません．\n";
         }
         return new_wave;
-    }
+    }*/
 
     int fixed_samples = intro_length + outro_length;
     double target_samples = static_cast<double>(goal_time) * 60.0 * sample_rate * channels;
